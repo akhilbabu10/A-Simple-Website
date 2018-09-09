@@ -1,0 +1,104 @@
+<html>
+<head>
+	<title>
+		Login page
+	</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "Username" && form.pswrd.value == "password")
+  {
+    window.open('Success.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
+<style>
+body{
+            margin: 0;
+            padding: 0;
+        }
+        body:before{
+            content: '';
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("Blur.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            
+        }
+        .form
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px;
+            height: 500px;
+            padding: 80px 40px;
+            box-sizing: border-box;
+            background: rgba(0,0,0,.2);
+        }
+       
+        .form h1 {
+            margin: 0;
+            padding: 0 0 20px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        .form input
+        {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .form input[type="text"],
+        .form input[type="password"]
+        {
+            border-radius: 5px;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+	    padding: 0.5rem;
+            font-size: 16px;
+        }
+        .form input[type="submit"] {
+            height: 40px;
+            color: #fff;
+            font-size: 15px;
+            background: red;
+            cursor: pointer;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            margin-top: 5%;
+        }
+        
+</style>
+</head>
+<body>
+<div class="form">
+<h1 style="font-family:'Montserrat', sans-serif";text-align="center";font-size:20pt;color:#00FF00;>
+Welcome
+</h1>
+<form name="login">
+<input type="text" name="userid" placeholder="  Username"/>
+<input type="password" name="pswrd" placeholder="  Password"/>
+<input type="submit" onclick="check(this.form)" value="Login"/>
+<input type="submit" value="Cancel"/>
+</form>
+</div>
+</body>
+</html>
